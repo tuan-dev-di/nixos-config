@@ -7,7 +7,7 @@ nixos-config
 
 ├── hosts
 
-│   ├── x99-tf (hostname)
+│   ├── nixos (Your Hostname)
 
 │   │     ├── configuration.nix
 
@@ -33,7 +33,7 @@ nixos-config
 
 └── home
 
-    ├── chicoarun (username)
+    ├── arys (Your Username)
 
     │     └──home.nix
 

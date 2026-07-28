@@ -3,10 +3,10 @@
   description = "multi-machines NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:NixOs/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOs/nixpkgs/nixos-26.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -25,11 +25,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mangowm = {
-      url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager,  ... }:
@@ -42,8 +37,8 @@
             ./hosts/${hostname}/configuration.nix
             ./modules/nixos/common.nix
             ./modules/nixos/noctalia.nix
-            ./modules/nixos/mangowm.nix
-            #./modules/nixos/flatpak.nix
+            ./modules/nixos/niri.nix
+            ./modules/nixos/flatpak.nix
             ./modules/nixos/fcitx5-lotus.nix
             home-manager.nixosModules.home-manager
             {

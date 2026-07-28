@@ -33,24 +33,43 @@
     SUDO_EDITOR = "nvim";
   };
   environment.systemPackages = with pkgs; [
-    gcc
+    # ETC
     nil
     vlc
-    stremio-linux-shell
-    obsidian
     tree-sitter
-    git
     neovim
     ghostty
     xwayland-satellite
     unzip
     flatpak
     fastfetch
-    protonup-qt
-    vesktop
-    ungoogled-chromium
     pay-respects
-    firefox
     gpu-screen-recorder
+    lact
+    kdePackages.dolphin
+
+    # Dev Env
+    nodejs_26
+    jdk17
+    dotnet-sdk_11
+    go
+    rustc
+    gcc
+    git
+    github-desktop
+    postgresql_16
+    vscode-fhs
+    postman
+    obsidian
+
+    # Web browser
+    google-chrome
+    brave
+    microsoft-edge
+    ungoogled-chromium
+
+    # Apps
+    stremio-linux-shell
+    vesktop
   ];
 }
