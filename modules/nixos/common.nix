@@ -1,28 +1,25 @@
 { config, pkgs, ... }:
 {
-  nix.settings = 
-    {
-      experimental-features = 
-        [
-          "nix-command"
-          "flakes"
-        ];
-    };
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs.zsh.enable = true;
-  security.polkit.enable = true;   
+  security.polkit.enable = true;
   users.users.arys = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = 
-      [
-        "wheel"
-        "networkmanager"
-      ];
-  }; 
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
+  };
   nixpkgs.config.allowUnfree = true;
   environment.sessionVariables = {
     GTK_IM_MODULE = "fcitx";
@@ -47,6 +44,10 @@
     gpu-screen-recorder
     lact
     kdePackages.dolphin
+    nautilus
+    vim
+    wget
+    nixfmt
 
     # Dev Env
     nodejs_26
@@ -56,9 +57,12 @@
     rustc
     gcc
     git
+
+    # Dev Apps
     github-desktop
     postgresql_16
-    vscode-fhs
+    vscode
+    antigravity
     postman
     obsidian
 

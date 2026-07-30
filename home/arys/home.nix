@@ -6,8 +6,8 @@
   ];
 
   home.username = "arys";
-  home.homeDirectory = "/home/arys";
-  home.stateVersion = "26.05";
+  home.homeDirectory = "/home/arys"; # root directory for the user
+  home.stateVersion = "26.05"; # Version of NixOS which you are using.
 
   home.packages = with pkgs; [
     nodejs_22
