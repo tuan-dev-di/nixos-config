@@ -43,7 +43,6 @@
     pay-respects
     gpu-screen-recorder
     lact
-    kdePackages.dolphin
     nautilus
     vim
     wget
@@ -75,5 +74,9 @@
     # Apps
     stremio-linux-shell
     vesktop
+    webex
+    signal-desktop
+    telegram-desktop
+    zoom-us
   ];
 }

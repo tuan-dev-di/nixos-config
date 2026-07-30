@@ -1,10 +1,15 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -32,17 +37,17 @@
   # Set your time zone.
   time.timeZone = "Asia/Ho_Chi_Minh";
 
-
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
+  services.gvfs.enable = true;
 
   users.users.arys = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; 
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [
       tree
     ];
@@ -50,7 +55,10 @@
 
   system.stateVersion = "26.05"; # Version of NixOS which you are using.
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   xdg.portal = {
     enable = true;
@@ -62,7 +70,10 @@
 
     config = {
       common = {
-        default = ["gnome" "gtk"];
+        default = [
+          "gnome"
+          "gtk"
+        ];
       };
     };
   };
