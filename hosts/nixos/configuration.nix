@@ -39,10 +39,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
   services.gvfs.enable = true;
 
   users.users.arys = {

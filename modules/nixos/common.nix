@@ -21,6 +21,7 @@
     ];
   };
   nixpkgs.config.allowUnfree = true;
+
   environment.sessionVariables = {
     GTK_IM_MODULE = "fcitx";
     QT_IM_MODULE = "fcitx";
@@ -28,7 +29,9 @@
     EDITOR = "nvim"; # or "nvim", "vim", "emacs", etc.
     VISUAL = "nvim";
     SUDO_EDITOR = "nvim";
+    JAVA_HOME = pkgs.jdk.home;
   };
+
   environment.systemPackages = with pkgs; [
     # ETC
     nil
@@ -50,7 +53,8 @@
 
     # Dev Env
     nodejs_26
-    jdk17
+    #jdk17
+    jdk21
     dotnet-sdk_11
     go
     rustc
@@ -74,7 +78,6 @@
     # Apps
     stremio-linux-shell
     vesktop
-    webex
     signal-desktop
     telegram-desktop
     zoom-us
