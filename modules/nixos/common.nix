@@ -81,5 +81,6 @@
     signal-desktop
     telegram-desktop
     zoom-us
+    wpsoffice
   ];
 }
