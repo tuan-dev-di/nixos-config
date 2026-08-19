@@ -82,5 +82,6 @@
     telegram-desktop
     zoom-us
     wpsoffice
+    webex
   ];
 }
